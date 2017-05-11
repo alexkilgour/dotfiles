@@ -1,2 +1,2 @@
 # dotfiles
-Personal git aliases, zsh settings and custom fonts
+git aliases, zsh settings and custom fonts
