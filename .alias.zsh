@@ -35,3 +35,20 @@ get_repo_branch() {
   echo $ref
 }
 alias gitpr='git push -u origin $(get_repo_branch)'
+
+# make directory and cd into it
+mcd() {
+	mkdir -p "$1" && cd "$1";
+}
+
+# go back x directories
+b() {
+    str=""
+    count=0
+    while [ "$count" -lt "$1" ];
+    do
+        str=$str"../"
+        let count=count+1
+    done
+    cd $str
+}

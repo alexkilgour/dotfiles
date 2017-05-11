@@ -1,11 +1,20 @@
 # antigen
-source /Users/a.kilgour/antigen.zsh
+source /Users/a.kilgour/.antigen.zsh
 
 # aliases
 if [ -f ./.alias.zsh ]; then
+    print "aliases: ./.alias.zsh added."
     source ./.alias.zsh
 else
     print "404: ./.alias.zsh not found."
+fi
+
+# private aliases
+if [ -f ./.privatealias.zsh ]; then
+    print "aliases: ./.privatealias.zsh added."
+    source ./.privatealias.zsh
+else
+    print "404: ./.privatealias.zsh not found."
 fi
 
 # Powerline
