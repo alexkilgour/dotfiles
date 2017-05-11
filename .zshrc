@@ -1,6 +1,10 @@
 # antigen
 source ~/.antigen.zsh
 
+# editor
+echo "export EDITOR=/usr/bin/nano"
+echo "export VISUAL=/usr/bin/nano"
+
 # aliases
 if [ -f ./.alias.zsh ]; then
     print "aliases: ./.alias.zsh added."
