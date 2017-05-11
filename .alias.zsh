@@ -22,8 +22,8 @@ alias gbd='for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=
 
 # git push current branch
 pushit(){
-  echo "${ORANGE}Oooh, baby, baby. Baby, baby. Oooh, baby, baby. Baby, baby${D}"
-  echo "${ORANGE}Ah, push it - push it good. Ah, push it - push it real good${D}"
+  print -P -- "%F{009}Oooh, baby, baby. Baby, baby. Oooh, baby, baby. Baby, baby%f"
+  print -P -- "%F{009}Ah, push it - push it good. Ah, push it - push it real good%f"
   git push -u
 }
 alias gitp='pushit'
@@ -52,3 +52,6 @@ b() {
     done
     cd $str
 }
+
+# print available colors
+alias allcolors='for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"'
