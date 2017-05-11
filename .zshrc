@@ -5,6 +5,9 @@ source ~/.antigen.zsh
 echo "export EDITOR=/usr/bin/nano"
 echo "export VISUAL=/usr/bin/nano"
 
+# git completion
+source ~/.git-completion.bash
+
 # aliases
 if [ -f ./.alias.zsh ]; then
     print "aliases: ./.alias.zsh added."
