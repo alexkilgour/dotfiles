@@ -1,5 +1,5 @@
 # antigen
-source /Users/a.kilgour/.antigen.zsh
+source ~/.antigen.zsh
 
 # aliases
 if [ -f ./.alias.zsh ]; then
