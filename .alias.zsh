@@ -9,9 +9,7 @@ alias shf='defaults write com.apple.finder AppleShowAllFiles -bool true; killall
 alias hhf='defaults write com.apple.finder AppleShowAllFiles -bool false; killall Finder'
 
 # git alias
-alias gits='show_status -d ~/repositories'
 alias gci='git commit'
-alias grb='git rebase'
 alias gita='git add -i'
 alias log='yolog'
 alias conflict='code `git diff --name-only | uniq`'
