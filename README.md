@@ -11,8 +11,6 @@ Uses [Material Design color theme](https://github.com/MartinSeeler/iterm2-materi
 
 ## font
 * _iTerm2 > Preferences > Profiles > Text_
-* Change both the font and the non-ascii font
-* Anti-alias for both fonts
-* Use a different font for non-ascii text
-* Font: [`Range Mono`](https://pilgrimfonts.com/range-mono/) (paid)
-* Alternatives: [`Droid Sans Mono`](https://fonts.google.com/specimen/Droid+Sans+Mono), [`Source Sans Pro`](https://fonts.google.com/specimen/Source+Sans+Pro)
+* [`Range Mono`](https://pilgrimfonts.com/range-mono/) (paid)
+* [`Droid Sans Mono`](https://github.com/AlbertoDorado/droid-sans-mono-zeromod)
+* [`Source Code Pro`](https://github.com/adobe-fonts/source-code-pro)
