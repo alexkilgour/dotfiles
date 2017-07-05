@@ -25,6 +25,7 @@ pushit(){
   print -P -- ""
   print -P -- "%F{009}Oooh, baby, baby. Baby, baby. Oooh, baby, baby. Baby, baby%f"
   print -P -- "%F{009}Ah, push it - push it good. Ah, push it - push it real good%f"
+  print -P -- ""
   git push -u
 }
 alias gitp='pushit'
