@@ -11,6 +11,7 @@ Uses [Material Design color theme](https://github.com/MartinSeeler/iterm2-materi
 
 ## font
 * _iTerm2 > Preferences > Profiles > Text_
+* [`Menlo`](Menlo-Regular.ttf)
 * [`Range Mono`](https://pilgrimfonts.com/range-mono/) (paid)
 * [`Droid Sans Mono`](https://github.com/AlbertoDorado/droid-sans-mono-zeromod)
 * [`Source Code Pro`](https://github.com/adobe-fonts/source-code-pro)
