@@ -17,7 +17,7 @@ module.exports = {
     cursorShape: 'BLOCK',
 
     // set to true for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#fff',
@@ -104,7 +104,7 @@ module.exports = {
     hyperStatusLine: {
         dirtyColor: 'salmon',
         footerTransparent: false,
-      }
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -116,10 +116,9 @@ module.exports = {
   plugins: [
     'hyper-snazzy',
     'hyperborder',
-    'hyper-blink',
     'hyper-tabs-enhanced',
     'hyper-statusline',
-    // 'hyperline',
+    'hypercwd'
   ],
 
   // in development, you can create a directory under

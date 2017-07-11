@@ -6,17 +6,17 @@ export EDITOR=/usr/bin/nano
 export VISUAL=/usr/bin/nano
 
 # aliases
-if [ -f ./.alias.zsh ]; then
-    source ./.alias.zsh
+if [ -f ~/.alias.zsh ]; then
+    source ~/.alias.zsh
 else
-    print "404: ./.alias.zsh not found."
+    print "404: ~/.alias.zsh not found."
 fi
 
 # private aliases
-if [ -f ./.privatealias.zsh ]; then
-    source ./.privatealias.zsh
+if [ -f ~/.privatealias.zsh ]; then
+    source ~/.privatealias.zsh
 else
-    print "404: ./.privatealias.zsh not found."
+    print "404: ~/.privatealias.zsh not found."
 fi
 
 # Load the oh-my-zsh's library.
