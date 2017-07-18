@@ -11,6 +11,7 @@ alias hhf='defaults write com.apple.finder AppleShowAllFiles -bool false; killal
 # git alias
 alias gci='git commit'
 alias gita='git add -i'
+alias gitb="git create-branch"
 alias log='yolog'
 alias conflict='code `git diff --name-only | uniq`'
 alias clustergit="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status && echo)' \;"
