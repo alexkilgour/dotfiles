@@ -11,10 +11,11 @@ alias hhf='defaults write com.apple.finder AppleShowAllFiles -bool false; killal
 # git alias
 alias gci='git commit'
 alias gita='git add -i'
-alias gitb="git create-branch"
+alias gitb='git create-branch'
 alias log='yolog'
 alias conflict='code `git diff --name-only | uniq`'
 alias clustergit="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status && echo)' \;"
+alias prune='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
 
 # print out list of all branches with last commit date to the branch
 alias gbd='for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r'
