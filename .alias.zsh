@@ -30,6 +30,15 @@ pushit(){
 }
 alias gitp='pushit'
 
+# alias npm to nom
+nomnom(){
+  print -P -- ""
+  print -P -- "%F{009}(ˆڡˆ)v (ˆڡˆ)v nom nom nom (ˆڡˆ)v (ˆڡˆ)v%f"
+  print -P -- ""
+  npm "$@"
+}
+alias nom='nomnom'
+
 # git push branch to remote
 # gitpr <name-of-branch>
 get_repo_branch() {
