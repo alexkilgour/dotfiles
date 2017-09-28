@@ -1,5 +1,5 @@
 # dotfiles
-git aliases, zsh settings and custom fonts
+git aliases, zsh settings, custom fonts and editor configs
 
 ## colors
 Uses [Material Design color theme](https://github.com/MartinSeeler/iterm2-material-design)
