@@ -15,3 +15,10 @@ Uses [Material Design color theme](https://github.com/MartinSeeler/iterm2-materi
 * [`Range Mono`](https://pilgrimfonts.com/range-mono/) (paid)
 * [`Droid Sans Mono`](https://github.com/AlbertoDorado/droid-sans-mono-zeromod)
 * [`Source Code Pro`](https://github.com/adobe-fonts/source-code-pro)
+
+## vscode
+Symlink the `settings.json` and extensions folder from this repo
+```bash
+$ ln -s $HOME/path/to/dotfiles/vscode-extensions $HOME/.vscode/extensions
+$ ln -s $HOME/path/to/dotfiles/vscode.settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+```
