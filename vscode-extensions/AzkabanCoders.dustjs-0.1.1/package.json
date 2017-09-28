@@ -1,0 +1,57 @@
+{
+ "name": "dustjs",
+ "displayName": "DustJS",
+ "description": "DustJS Visual Studio Code",
+ "version": "0.1.1",
+ "publisher": "AzkabanCoders",
+ "icon": "images/dustjs.png",
+ "galleryBanner": {
+  "color": "#181835",
+  "theme": "dark"
+ },
+ "license": "SEE LICENSE IN LICENSE.md",
+ "homepage": "https://github.com/AzkabanCoders/vscode-dustjs/blob/master/README.md",
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/AzkabanCoders/vscode-dustjs"
+ },
+ "bugs": {
+  "url": "https://github.com/AzkabanCoders/vscode-dustjs/issues"
+ },
+ "engines": {
+  "vscode": "^1.5.0"
+ },
+ "categories": [
+  "Languages"
+ ],
+ "contributes": {
+  "languages": [
+   {
+    "id": "dustjs",
+    "aliases": [
+     "DustJS",
+     "dustjs"
+    ],
+    "extensions": [
+     ".dust",
+     ".tl",
+     ".dustjs",
+     ".template"
+    ],
+    "configuration": "./dustjs.configuration.json"
+   }
+  ],
+  "grammars": [
+   {
+    "language": "dustjs",
+    "scopeName": "text.html.dustjs",
+    "path": "./syntaxes/dustjs.tmLanguage"
+   }
+  ]
+ },
+ "__metadata": {
+  "id": "ea72caac-d7d1-4f89-be7f-c89345ce6dca",
+  "publisherId": "b1e27c4e-0d06-4d45-a49a-06f8c58c54f2",
+  "publisherDisplayName": "AzkabanCoders"
+ }
+}

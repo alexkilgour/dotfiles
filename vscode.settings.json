@@ -1,0 +1,26 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "file-icons",
+    "stylelint.enable": true,
+    "stylelint.ignoreFiles": "node_modules/**/*.css",
+    "xo.enable": true,
+    "sync.gist": "aaab73dab5adc4556139fc60f0a00749",
+    "sync.lastUpload": "",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.forceDownload": false,
+    "sync.anonymousGist": true,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "editor.insertSpaces": false,
+    "typescript.npm": "/usr/local/bin/npm",
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "files.associations": {
+        "*.css.ejs": "css",
+        "*.js.ejs": "javascript"
+    }
+}
