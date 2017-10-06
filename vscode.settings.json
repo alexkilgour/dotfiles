@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Monokai Pro (Filter Machine)",
     "workbench.iconTheme": "material-icon-theme",
     "stylelint.enable": true,
     "stylelint.ignoreFiles": "node_modules/**/*.css",
@@ -22,5 +22,6 @@
     "files.associations": {
         "*.css.ejs": "css",
         "*.js.ejs": "javascript"
-    }
+    },
+    "workbench.startupEditor": "newUntitledFile"
 }
