@@ -5,6 +5,10 @@
     "stylelint.ignoreFiles": "node_modules/**/*.css",
     "xo.enable": true,
     "editor.insertSpaces": false,
+    "editor.fontSize": 12,
+    "editor.wordWrapColumn": 80,
+    "files.trimTrailingWhitespace": true,
+    "html.suggest.html5": true,
     "typescript.npm": "/usr/local/bin/npm",
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -13,5 +17,30 @@
         "*.css.ejs": "css",
         "*.js.ejs": "javascript"
     },
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/.idea": true,
+        "**/.vscode": false,
+        "**/yarn.lock": true,
+        "**/tmp": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/node_modules/**": true,
+        "**/tmp": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/tmp": true,
+        "**/coverage": true,
+        "**/ios": true,
+        "**/android": true
+    }
 }
