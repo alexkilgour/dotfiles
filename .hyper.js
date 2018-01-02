@@ -117,8 +117,7 @@ module.exports = {
     'hyper-snazzy',
     'hyperborder',
     'hyper-tabs-enhanced',
-    'hyper-statusline',
-    'hypercwd'
+    'hyper-statusline'
   ],
 
   // in development, you can create a directory under
