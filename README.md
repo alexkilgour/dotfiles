@@ -17,8 +17,9 @@ Uses [Material Design color theme](https://github.com/MartinSeeler/iterm2-materi
 * [`Source Code Pro`](https://github.com/adobe-fonts/source-code-pro)
 
 ## vscode
-Symlink the `vscode.settings.json` and extensions folder from this repo
+1. Symlink the `vscode.settings.json` from this repo
 ```bash
-$ ln -s $HOME/path/to/dotfiles/vscode-extensions $HOME/.vscode/extensions
 $ ln -s $HOME/path/to/dotfiles/vscode.settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 ```
+2. Install [Extension Manager by webstp](https://marketplace.visualstudio.com/items?itemName=webstp.extension-manager)
+3. Hit `F1` and run `Extension Manager: Install Missing Extensions`
