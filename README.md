@@ -21,5 +21,7 @@ Uses [Material Design color theme](https://github.com/MartinSeeler/iterm2-materi
 ```bash
 $ ln -s $HOME/path/to/dotfiles/vscode.settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 ```
-2. Install [Extension Manager by webstp](https://marketplace.visualstudio.com/items?itemName=webstp.extension-manager)
-3. Hit `F1` and run `Extension Manager: Install Missing Extensions`
+2. Install the extensions from the command line
+```bash
+$ node vscode-install.js
+```
