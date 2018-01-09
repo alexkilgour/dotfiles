@@ -24,6 +24,7 @@
 		"samverschueren.linter-xo",
 		"shinnn.stylelint",
 		"steve8708.Align",
+		"streetsidesoftware.code-spell-checker",
 		"wix.vscode-import-cost"
 	]
 }
