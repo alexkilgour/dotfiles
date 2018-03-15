@@ -37,3 +37,5 @@ $ ln -s $HOME/path/to/dotfiles/vscode.settings.json $HOME/Library/Application\ S
 ```bash
 $ node vscode-install.js
 ```
+
+To view currently installed extensions use `$ code --list-extensions`
