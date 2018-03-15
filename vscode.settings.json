@@ -2,8 +2,13 @@
     "workbench.colorTheme": "Monokai Pro (Filter Machine)",
     "workbench.iconTheme": "material-icon-theme",
     "stylelint.enable": true,
-    "stylelint.ignoreFiles": "node_modules/**/*.css",
-    "xo.enable": true,
+    "stylelint.configOverrides": {
+        "ignoreFiles": [
+            "**/*.md",
+            "node_modules/**/*.*"
+        ]
+    },
+    "eslint.enable": true,
     "editor.insertSpaces": false,
     "editor.fontSize": 12,
     "editor.wordWrapColumn": 80,
