@@ -47,5 +47,6 @@
         "**/coverage": true,
         "**/ios": true,
         "**/android": true
-    }
+    },
+    "material-icon-theme.showUpdateMessage": false
 }
