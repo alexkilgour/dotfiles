@@ -1,9 +1,6 @@
 # antigen
 source ~/.antigen.zsh
 
-# share history via Dropbox
-HISTFILE=~/Dropbox/Work/Shell/zsh/.zsh_history
-
 # editor
 export EDITOR=/usr/bin/nano
 export VISUAL=/usr/bin/nano

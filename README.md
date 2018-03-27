@@ -25,6 +25,7 @@ ln -sf $HOME/path/to/dotfiles/.alias.zsh $HOME/.alias.zsh
 ln -sf $HOME/path/to/dotfiles/.antigen.zsh $HOME/.antigen.zsh
 ln -sf $HOME/path/to/dotfiles/.hyper.js $HOME/.hyper.js
 ln -sf $HOME/path/to/dotfiles/.zshrc $HOME/.zshrc
+ln -sf $HOME/path/to/CLOUD/.zsh_history $HOME/.zsh_history
 ln -sf $HOME/path/to/CLOUD/.privatealias.zsh $HOME/.privatealias.zsh
 ```
 
