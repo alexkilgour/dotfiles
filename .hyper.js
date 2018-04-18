@@ -8,7 +8,13 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'Menlo, "Range Mono", "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+
+    // default font weight: 'normal' or 'bold'
+    fontWeight: 'normal',
+
+    // font weight for bold characters: 'normal' or 'bold'
+    fontWeightBold: 'normal',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -119,8 +125,8 @@ module.exports = {
     // Combine with zsh syntax highlighting
     // https://github.com/zsh-users/zsh-syntax-highlighting
     'hyper-snazzy',
-    'hyperborder',
-    'hyper-tabs-enhanced',
+    // 'hyperborder',
+    // 'hyper-tabs-enhanced',
     'hyper-statusline'
   ],
 
