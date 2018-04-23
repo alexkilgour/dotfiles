@@ -104,12 +104,17 @@ module.exports = {
     // for advanced config flags please refer to https://hyper.is/#cfg
 
     hyperTabs: {
-        trafficButtons: true,
-        tabIconsColored: true,
+      trafficButtons: true,
+      tabIconsColored: true,
     },
     hyperStatusLine: {
-        dirtyColor: 'salmon',
-        footerTransparent: false,
+      dirtyColor: 'salmon',
+      footerTransparent: false,
+    },
+    hyperBorder: {
+      borderWidth: '3px',
+      borderRadiusInner: '2px',
+      borderRadiusOuter: '2px'
     }
   },
 
