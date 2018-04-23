@@ -125,8 +125,8 @@ module.exports = {
     // Combine with zsh syntax highlighting
     // https://github.com/zsh-users/zsh-syntax-highlighting
     'hyper-snazzy',
-    // 'hyperborder',
-    // 'hyper-tabs-enhanced',
+    'hyperborder',
+    'hyper-tab-icons',
     'hyper-statusline'
   ],
 
