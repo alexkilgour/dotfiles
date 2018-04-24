@@ -1,9 +1,13 @@
 // Future versions of Hyper may add additional config options,
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
+// https://github.com/zeit/hyper/blob/master/app/config/config-default.js
 
 module.exports = {
   config: {
+    // stable or canary
+    updateChannel: 'stable',
+
     // default font size in pixels for all tabs
     fontSize: 12,
 
@@ -11,10 +15,13 @@ module.exports = {
     fontFamily: 'Menlo, "Range Mono", "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
-    fontWeight: 'normal',
+    fontWeight: 'lighter',
 
     // font weight for bold characters: 'normal' or 'bold'
-    fontWeightBold: 'normal',
+    fontWeightBold: 'bold',
+
+    // line height as a relative unit
+    lineHeight: 1,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
