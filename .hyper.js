@@ -125,6 +125,10 @@ module.exports = {
     }
   },
 
+  // Terminal colors: https://github.com/sindresorhus/hyper-snazzy
+  // With: https://github.com/zsh-users/zsh-syntax-highlighting
+  // Prompt: https://github.com/sindresorhus/pure
+
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
   // examples:
@@ -132,10 +136,6 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    // Terminal colors
-    // https://github.com/sindresorhus/hyper-snazzy
-    // Combine with zsh syntax highlighting
-    // https://github.com/zsh-users/zsh-syntax-highlighting
     'hyper-snazzy',
     'hyperborder',
     'hyper-tab-icons',
