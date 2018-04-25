@@ -30,6 +30,7 @@ ln -sf $HOME/path/to/CLOUD/.privatealias.zsh $HOME/.privatealias.zsh
 ```
 
 ## vscode
+1. Install [Fira Code](https://github.com/tonsky/FiraCode) font
 1. Symlink the `vscode.settings.json` from this repo
 ```bash
 $ ln -s $HOME/path/to/dotfiles/vscode.settings.json $HOME/Library/Application\ Support/Code/User/settings.json
