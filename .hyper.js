@@ -42,7 +42,11 @@ module.exports = {
     borderColor: '#333',
 
     // custom css to embed in the main window
-    css: '',
+    css: `
+      .term_fit:not(.term_term) {
+        opacity: 1 !important
+      }
+    `,
 
     // custom css to embed in the terminal window
     termCSS: '',
@@ -110,10 +114,6 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg
 
-    hyperTabs: {
-      trafficButtons: true,
-      tabIconsColored: true,
-    },
     hyperStatusLine: {
       dirtyColor: 'salmon',
       footerTransparent: false,
