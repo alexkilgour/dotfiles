@@ -47,5 +47,9 @@ antigen bundle sindresorhus/pure
 # Other bundles
 antigen bundle lukechilds/zsh-nvm
 
+# SpringerNature
+antigen bundle https://github.com/springernature/sn-zsh-extensions.git
+antigen bundle pass
+
 # Tell antigen that you're done.
 antigen apply
