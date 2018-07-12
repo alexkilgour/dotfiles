@@ -22,6 +22,7 @@
     "editor.formatOnPaste": true,
     "javascript.implicitProjectConfig.checkJs": false,
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
     "files.associations": {
         "*.css.ejs": "css",
         "*.js.ejs": "javascript"
