@@ -1,3 +1,6 @@
+# path
+PATH="/usr/local/opt/gnupg@1.4/libexec/gpgbin:$PATH"
+
 # antigen
 source ~/.antigen.zsh
 
@@ -18,6 +21,9 @@ if [ -f ~/.privatealias.zsh ]; then
 else
     print "404: ~/.privatealias.zsh not found."
 fi
+
+# travis cli
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
