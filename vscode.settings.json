@@ -11,7 +11,6 @@
         ]
     },
     "eslint.enable": true,
-    "editor.insertSpaces": false,
     "editor.fontSize": 12,
     "editor.wordWrapColumn": 80,
     "files.trimTrailingWhitespace": true,
@@ -35,6 +34,7 @@
         "**/.idea": true,
         "**/.vscode": false,
         "**/yarn.lock": true,
+        "**/package-lock.json": true,
         "**/tmp": true
     },
     "files.watcherExclude": {
@@ -53,5 +53,17 @@
         "**/android": true
     },
     "material-icon-theme.showUpdateMessage": false,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "npm.packageManager": "npm",
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false,
+	"editor.tabSize": 4,
+	"[json]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[yaml]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	}
 }

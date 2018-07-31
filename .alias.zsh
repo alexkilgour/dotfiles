@@ -1,4 +1,5 @@
-# set up a web server with the current directory as the web root, available at localhost:8000
+# set up a web server with the current directory as the web root
+# available at localhost:8000
 alias server='python -m SimpleHTTPServer'
 
 # npm global packages
