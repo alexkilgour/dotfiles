@@ -2,7 +2,10 @@
 git aliases, zsh settings, custom fonts and editor configs
 
 ## font
+* [`Fura Mono Powerline`](FuraMono-Regular Powerline.otf)
 * [`Menlo`](Menlo-Regular.ttf)
+
+### alternatives
 * [`Range Mono`](https://pilgrimfonts.com/range-mono/) (paid)
 * [`Droid Sans Mono`](https://github.com/AlbertoDorado/droid-sans-mono-zeromod)
 * [`Source Code Pro`](https://github.com/adobe-fonts/source-code-pro)

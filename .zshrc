@@ -49,9 +49,13 @@ antigen bundle z
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
 
-# Pure prompt (https://github.com/sindresorhus/pure)
 antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+
+# Pure prompt (https://github.com/sindresorhus/pure)
+# antigen bundle sindresorhus/pure
+
+# Spaceship theme
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 # Other bundles
 antigen bundle lukechilds/zsh-nvm
