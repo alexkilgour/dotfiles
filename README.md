@@ -2,7 +2,7 @@
 git aliases, zsh settings, custom fonts and editor configs
 
 ## font
-* [`Fura Mono Powerline`](FuraMono-Regular Powerline.otf)
+* [`Fura Mono Powerline`](FuraMono-Regular%20Powerline.otf)
 * [`Menlo`](Menlo-Regular.ttf)
 
 ### alternatives
