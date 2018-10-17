@@ -13,7 +13,7 @@
     "eslint.enable": true,
     "editor.fontSize": 12,
     "editor.wordWrapColumn": 80,
-    "files.trimTrailingWhitespace": true,
+    "files.trimTrailingWhitespace": false,
     "html.suggest.html5": true,
     "typescript.npm": "/usr/local/bin/npm",
     "atomKeymap.promptV3Features": true,
