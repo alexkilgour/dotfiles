@@ -2,7 +2,6 @@
 	"extensions": [
 		"2gua.rainbow-brackets",
 		"AzkabanCoders.dustjs",
-		"PKief.material-icon-theme",
 		"QassimFarid.ejs-language-support",
 		"Zignd.html-css-class-completion",
 		"abusaidm.html-snippets",
@@ -22,9 +21,11 @@
 		"ms-vscode.atom-keybindings",
 		"naumovs.color-highlight",
 		"oderwat.indent-rainbow",
+		"PKief.material-icon-theme",
 		"robinbentley.sass-indented",
 		"shinnn.stylelint",
-		"steve8708.Align",
+    "steve8708.Align",
+    "WallabyJs.quokka-vscode",
 		"wix.vscode-import-cost"
 	]
 }
