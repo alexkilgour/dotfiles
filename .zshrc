@@ -60,9 +60,8 @@ antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 # Other bundles
 antigen bundle lukechilds/zsh-nvm
 
-# SpringerNature
-antigen bundle https://github.com/springernature/sn-zsh-extensions.git
-antigen bundle pass
+# Kerb Kings Cross
+antigen bundle https://github.com/alexkilgour/kerbside --loc=plugins/kerbside
 
 # Tell antigen that you're done.
 antigen apply

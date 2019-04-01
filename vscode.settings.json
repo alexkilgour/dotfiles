@@ -66,5 +66,10 @@
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
-	"window.zoomLevel": 0
+	"window.zoomLevel": 0,
+	"colorize.languages": [
+		"css",
+		"sass",
+		"scss"
+	]
 }
