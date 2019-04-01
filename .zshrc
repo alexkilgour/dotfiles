@@ -61,7 +61,7 @@ antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 antigen bundle lukechilds/zsh-nvm
 
 # Kerb Kings Cross
-antigen bundle https://github.com/alexkilgour/kerbside --loc=plugins/kerbside
+antigen bundle https://github.com/alexkilgour/kerbside
 
 # Tell antigen that you're done.
 antigen apply
