@@ -64,3 +64,9 @@ b() {
     done
     cd $str
 }
+
+# bitrate of mp3 file
+get_bitrate () {
+    echo `basename "$1"`: `file "$1" | sed 's/.*, \(.*\)kbps.*/\1/' | tr -d " " ` kbps
+}
+alias bitrate='get_bitrate'
