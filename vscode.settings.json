@@ -66,6 +66,9 @@
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
+	"[ftl]": {
+		"editor.tabSize": 2
+	},
 	"window.zoomLevel": 0,
 	"colorize.languages": [
 		"css",

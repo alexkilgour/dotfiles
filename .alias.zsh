@@ -5,6 +5,9 @@ alias server='python -m SimpleHTTPServer'
 # npm global packages
 alias npmglobal='npm list -g --depth=0'
 
+# print npm scripts
+alias ls-scrips='cat package.json | jq -r .scripts'
+
 # hidden files
 alias shf='defaults write com.apple.finder AppleShowAllFiles -bool true; killall Finder'
 alias hhf='defaults write com.apple.finder AppleShowAllFiles -bool false; killall Finder'
