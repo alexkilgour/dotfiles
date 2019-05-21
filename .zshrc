@@ -9,7 +9,7 @@ export EDITOR=/usr/bin/nano
 export VISUAL=/usr/bin/nano
 
 # java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home
+export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # vault
 export VAULT_ADDR=https://vault.halfpipe.io
