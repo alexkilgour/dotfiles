@@ -1,5 +1,4 @@
-# set up a web server with the current directory as the web root
-# available at localhost:8000
+# web server with the current dir as root. localhost:8000
 alias server='python -m SimpleHTTPServer'
 
 # npm global packages
@@ -12,17 +11,17 @@ alias ls-scrips='cat package.json | jq -r .scripts'
 alias printsimple='for n in *; do printf '%s\n' "$n"; done'
 
 # hidden files
-alias shf='defaults write com.apple.finder AppleShowAllFiles -bool true; killall Finder'
-alias hhf='defaults write com.apple.finder AppleShowAllFiles -bool false; killall Finder'
+alias shf='defaults write com.apple.finder AppleShowAllFiles -bool true; killall Finder' # show hidden files
+alias hhf='defaults write com.apple.finder AppleShowAllFiles -bool false; killall Finder' # hide hidden files
 
 # git alias
-alias gci='git commit'
-alias gita='git add -i'
-alias gitb='git create-branch'
-alias log='yolog'
-alias conflict='code `git diff --name-only | uniq`'
-alias clustergit="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status && echo)' \;"
-alias prune='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
+alias gci='git commit' # git commit
+alias gita='git add -i' # git add -i
+alias gitb='git create-branch' # git create-branch <name>
+alias log='yolog' # yolog
+alias conflict='code `git diff --name-only | uniq`' # show files with conflicts
+alias clustergit="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status && echo)' \;" # git status all the repos
+alias prune='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d' # delete merged branches
 
 # print out list of all branches with last commit date to the branch
 alias gbd='for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r'
@@ -46,8 +45,7 @@ nomnom(){
 }
 alias nom='nomnom'
 
-# git push branch to remote
-# gitpr <name-of-branch>
+# git push branch to remote. gitpr <name-of-branch>
 get_repo_branch() {
   ref=$(git symbolic-ref HEAD | cut -d'/' -f3)
   echo $ref
@@ -55,12 +53,13 @@ get_repo_branch() {
 alias gitpr='git push -u origin $(get_repo_branch)'
 
 # make directory and cd into it
-mcd() {
+make_and_cd() {
 	mkdir -p "$1" && cd "$1";
 }
+alias mcd='make_and_cd'
 
 # go back x directories
-b() {
+go_back() {
     str=""
     count=0
     while [ "$count" -lt "$1" ];
@@ -70,10 +69,11 @@ b() {
     done
     cd $str
 }
+alias b='go_back'
 
 # bitrate of mp3 file
 get_bitrate () {
     echo `basename "$1"`: `file "$1" | sed 's/.*, \(.*\)kbps.*/\1/' | tr -d " " ` kbps
 }
-alias bitrate='get_bitrate'
-alias bitrateall='for f in *.mp3; do get_bitrate $f; done'
+alias bitrate='get_bitrate' # show bitrate of mp3 file. birate <name>.mp3
+alias bitrateall='for f in *.mp3; do get_bitrate $f; done' # show bitrate of all mp3 files in dir
