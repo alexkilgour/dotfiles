@@ -8,6 +8,9 @@ alias npmglobal='npm list -g --depth=0'
 # print npm scripts
 alias ls-scrips='cat package.json | jq -r .scripts'
 
+# print file/directory names only
+alias printsimple='for n in *; do printf '%s\n' "$n"; done'
+
 # hidden files
 alias shf='defaults write com.apple.finder AppleShowAllFiles -bool true; killall Finder'
 alias hhf='defaults write com.apple.finder AppleShowAllFiles -bool false; killall Finder'
