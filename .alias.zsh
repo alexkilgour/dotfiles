@@ -76,3 +76,4 @@ get_bitrate () {
     echo `basename "$1"`: `file "$1" | sed 's/.*, \(.*\)kbps.*/\1/' | tr -d " " ` kbps
 }
 alias bitrate='get_bitrate'
+alias bitrateall='for f in *.mp3; do get_bitrate $f; done'
