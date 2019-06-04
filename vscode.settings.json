@@ -75,5 +75,6 @@
 		"sass",
 		"scss"
 	],
-	"editor.suggestSelection": "first"
+	"editor.suggestSelection": "first",
+	"workbench.statusBar.feedback.visible": false
 }
