@@ -76,5 +76,7 @@
 		"scss"
 	],
 	"editor.suggestSelection": "first",
-	"workbench.statusBar.feedback.visible": false
+	"workbench.statusBar.feedback.visible": false,
+	"breadcrumbs.enabled": false,
+	"html.format.wrapLineLength": 0
 }
