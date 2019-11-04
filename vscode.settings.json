@@ -78,5 +78,6 @@
 	"editor.suggestSelection": "first",
 	"workbench.statusBar.feedback.visible": false,
 	"breadcrumbs.enabled": false,
-	"html.format.wrapLineLength": 0
+	"html.format.wrapLineLength": 0,
+	"editor.minimap.enabled": true
 }
