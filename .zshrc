@@ -31,6 +31,42 @@ fi
 # travis cli
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
+# show all aliases
+allalias() {
+  for k in "${(@k)aliases}"; do
+	print -P -- "%F{189}$k%f -> %F{250}$aliases[$k]%f"
+  done
+}
+
+# Print out all my aliases
+helpme() {
+	all_name="allalias"
+	all_comment="print all aliases from zsh"
+	my_name="helpme"
+	my_comment="print my custom aliases"
+
+	printf "\e[38;5;189m%11s\e[0m \e[38;5;250m%s\e[0m\n" $my_name $my_comment
+	printf "\e[38;5;189m%11s\e[0m \e[38;5;250m%s\e[0m\n" $all_name $all_comment
+
+	if [ -f ~/.alias.zsh ]; then
+		grep "^alias" ~/.alias.zsh | while read -r line ; do
+			a=("${(@s/=/)line}")
+			name=("${(@s/ /)a}")
+			comment=("${(@s/# /)a}")
+			printf "\e[38;5;189m%11s\e[0m \e[38;5;250m%s\e[0m\n" $name[2] $comment[2]
+		done
+	fi
+
+	if [ -f ~/.privatealias.zsh ]; then
+		grep "^alias" ~/.privatealias.zsh | while read -r line ; do
+			a=("${(@s/=/)line}")
+			name=("${(@s/ /)a}")
+			comment=("${(@s/# /)a}")
+			printf "\e[38;5;189m%11s\e[0m \e[38;5;250m%s\e[0m\n" $name[2] $comment[2]
+		done
+	fi
+}
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 

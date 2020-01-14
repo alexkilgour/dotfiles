@@ -1,32 +1,5 @@
-# web server with the current dir as root. localhost:8000
-alias server='python -m SimpleHTTPServer'
+# Functions
 
-# npm global packages
-alias npmglobal='npm list -g --depth=0'
-
-# print npm scripts
-alias ls-scrips='cat package.json | jq -r .scripts'
-
-# print file/directory names only
-alias printsimple='for n in *; do printf '%s\n' "$n"; done'
-
-# hidden files
-alias shf='defaults write com.apple.finder AppleShowAllFiles -bool true; killall Finder' # show hidden files
-alias hhf='defaults write com.apple.finder AppleShowAllFiles -bool false; killall Finder' # hide hidden files
-
-# git alias
-alias gci='git commit' # git commit
-alias gita='git add -i' # git add -i
-alias gitb='git create-branch' # git create-branch <name>
-alias log='yolog' # yolog
-alias conflict='code `git diff --name-only | uniq`' # show files with conflicts
-alias clustergit="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status && echo)' \;" # git status all the repos
-alias prune='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d' # delete merged branches
-
-# print out list of all branches with last commit date to the branch
-alias gbd='for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r'
-
-# git push current branch
 pushit(){
   print -P -- ""
   print -P -- "%F{009}Oooh, baby, baby. Baby, baby. Oooh, baby, baby. Baby, baby%f"
@@ -34,31 +7,23 @@ pushit(){
   print -P -- ""
   git push -u
 }
-alias gitp='pushit'
 
-# alias npm to nom
 nomnom(){
   print -P -- ""
   print -P -- "%F{009}(ˆڡˆ)v (ˆڡˆ)v nom nom nom (ˆڡˆ)v (ˆڡˆ)v%f"
   print -P -- ""
   npm "$@"
 }
-alias nom='nomnom'
 
-# git push branch to remote. gitpr <name-of-branch>
 get_repo_branch() {
   ref=$(git symbolic-ref HEAD | cut -d'/' -f3)
   echo $ref
 }
-alias gitpr='git push -u origin $(get_repo_branch)'
 
-# make directory and cd into it
 make_and_cd() {
 	mkdir -p "$1" && cd "$1";
 }
-alias mcd='make_and_cd'
 
-# go back x directories
 go_back() {
     str=""
     count=0
@@ -69,11 +34,33 @@ go_back() {
     done
     cd $str
 }
-alias b='go_back'
 
-# bitrate of mp3 file
 get_bitrate () {
     echo `basename "$1"`: `file "$1" | sed 's/.*, \(.*\)kbps.*/\1/' | tr -d " " ` kbps
 }
+
+# Public Alises
+
+alias server='python -m SimpleHTTPServer' # web server with the current dir as root. localhost:8000
+alias npmglobal='npm list -g --depth=0' # npm global packages
+alias ls-scrips='cat package.json | jq -r .scripts' # print npm scripts
+alias printsimple='for n in *; do printf '%s\n' "$n"; done' # print file/directory names only
+alias shf='defaults write com.apple.finder AppleShowAllFiles -bool true; killall Finder' # show hidden files
+alias hhf='defaults write com.apple.finder AppleShowAllFiles -bool false; killall Finder' # hide hidden files
+
+alias gci='git commit' # git commit
+alias gita='git add -i' # git add -i
+alias gitb='git create-branch' # git create-branch <name>
+alias log='yolog' # yolog
+alias conflict='code `git diff --name-only | uniq`' # show files with conflicts
+alias clustergit="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status && echo)' \;" # git status all the repos
+alias prune='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d' # delete merged branches
+alias gbd='for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r' # print out list of all branches with last commit date to the branch
+alias gitp='pushit' # git push current branch
+alias gitpr='git push -u origin $(get_repo_branch)' # git push branch to remote. gitpr <name-of-branch>
+
+alias nom='nomnom' # nom instead of npm
+alias mcd='make_and_cd' # make directory and cd into it
+alias b='go_back' # go back x directories
 alias bitrate='get_bitrate' # show bitrate of mp3 file. birate <name>.mp3
 alias bitrateall='for f in *.mp3; do get_bitrate $f; done' # show bitrate of all mp3 files in dir
