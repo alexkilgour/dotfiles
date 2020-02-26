@@ -1,6 +1,6 @@
 {
 	"extensions": [
-		"2gua.rainbow-brackets",
+    "2gua.rainbow-brackets",
     "AzkabanCoders.dustjs",
     "QassimFarid.ejs-language-support",
     "abusaidm.html-snippets",
@@ -11,9 +11,13 @@
     "christian-kohler.path-intellisense",
     "dawhite.mustache",
     "dbaeumer.vscode-eslint",
+    "dcortes92.FreeMarker",
     "formulahendry.auto-close-tag",
     "formulahendry.auto-rename-tag",
+    "glen-84.sass-lint",
+    "huntertran.auto-markdown-toc",
     "kamikillerto.vscode-colorize",
+    "mathiasfrohlich.Kotlin",
     "mkaufman.HTMLHint",
     "mohsen1.prettify-json",
     "monokai.theme-monokai-pro-vscode",
