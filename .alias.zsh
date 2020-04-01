@@ -44,7 +44,7 @@ download_iplayer () {
 }
 
 download_youtube_audio () {
-	youtube-dl --extract-audio --audio-format wav --audio-quality 0 "$1"
+	youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "$1"
 }
 
 download_youtube_video () {
