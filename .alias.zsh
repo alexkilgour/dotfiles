@@ -39,6 +39,18 @@ get_bitrate () {
     echo `basename "$1"`: `file "$1" | sed 's/.*, \(.*\)kbps.*/\1/' | tr -d " " ` kbps
 }
 
+download_iplayer () {
+	get_iplayer --get --pid "$1" --pid-recursive
+}
+
+download_youtube_audio () {
+	youtube-dl --extract-audio --audio-format wav --audio-quality 0 "$1"
+}
+
+download_youtube_video () {
+	youtube-dl "$1"
+}
+
 # Public Alises
 
 alias server='python -m SimpleHTTPServer' # web server with the current dir as root. localhost:8000
@@ -64,3 +76,6 @@ alias mcd='make_and_cd' # make directory and cd into it
 alias b='go_back' # go back x directories
 alias bitrate='get_bitrate' # show bitrate of mp3 file. birate <name>.mp3
 alias bitrateall='for f in *.mp3; do get_bitrate $f; done' # show bitrate of all mp3 files in dir
+alias iplayer='download_iplayer' # download iplayer show via URL, https://github.com/get-iplayer/get_iplayer
+alias ytaudio='download_youtube_audio' # download youtube audio as a WAV file, https://github.com/ytdl-org/youtube-dl
+alias ytvideo='download_youtube_video' # download youtube audio as a WAV file, https://github.com/ytdl-org/youtube-dl
