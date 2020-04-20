@@ -51,6 +51,13 @@ download_youtube_video () {
 	youtube-dl "$1"
 }
 
+flac_to_mp3 () {
+	local bitrate="${1:-320}"
+	for file in **/*.flac; do
+		ffmpeg -i "$file" -ab "$bitrate"k -map_metadata 0 -id3v2_version 3 "${file%.flac}".mp3
+	done
+}
+
 # Public Alises
 
 alias server='python -m SimpleHTTPServer' # web server with the current dir as root. localhost:8000
@@ -79,3 +86,4 @@ alias bitrateall='for f in *.mp3; do get_bitrate $f; done' # show bitrate of all
 alias iplayer='download_iplayer' # download iplayer show via URL, https://github.com/get-iplayer/get_iplayer
 alias ytaudio='download_youtube_audio' # download youtube audio as a WAV file, https://github.com/ytdl-org/youtube-dl
 alias ytvideo='download_youtube_video' # download youtube audio as a WAV file, https://github.com/ytdl-org/youtube-dl
+alias flactomp3='flac_to_mp3' # recursively convert .flac to .mp3 - e.g. "flactomp3 256" defaults to 320kbps with no arg
