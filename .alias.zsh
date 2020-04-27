@@ -1,6 +1,6 @@
 # Functions
 
-pushit(){
+pushit() {
   print -P -- ""
   print -P -- "%F{009}Oooh, baby, baby. Baby, baby. Oooh, baby, baby. Baby, baby%f"
   print -P -- "%F{009}Ah, push it - push it good. Ah, push it - push it real good%f"
@@ -8,7 +8,7 @@ pushit(){
   git push -u
 }
 
-nomnom(){
+nomnom() {
   print -P -- ""
   print -P -- "%F{009}(ˆڡˆ)v (ˆڡˆ)v nom nom nom (ˆڡˆ)v (ˆڡˆ)v%f"
   print -P -- ""
@@ -39,22 +39,42 @@ get_bitrate () {
     echo `basename "$1"`: `file "$1" | sed 's/.*, \(.*\)kbps.*/\1/' | tr -d " " ` kbps
 }
 
+# https://github.com/get-iplayer/get_iplayer
 download_iplayer () {
 	get_iplayer --get --pid "$1" --pid-recursive
 }
 
+# https://github.com/ytdl-org/youtube-dl
 download_youtube_audio () {
 	youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "$1"
 }
 
+# https://github.com/ytdl-org/youtube-dl
 download_youtube_video () {
 	youtube-dl "$1"
 }
 
+# requirements: ffmpeg
 flac_to_mp3 () {
 	local bitrate="${1:-320}"
 	for file in **/*.flac; do
 		ffmpeg -i "$file" -ab "$bitrate"k -map_metadata 0 -id3v2_version 3 "${file%.flac}".mp3
+	done
+}
+
+# work in zsh only
+# http://tim.vanwerkhoven.org/post/2012/10/28/ZSH/Bash-string-manipulation
+# Requirements
+# pip install eyeD3==0.8.12 (for python 2.7)
+# brew install libmagic
+tag_mp3() {
+	for file in *.mp3; do
+		if [[ $file == *"-"* ]]; then
+			local basename="${file%\.*}"
+			local artist="${(C)${basename[(ws: - :)1]}}"
+			local title="${(C)${basename[(ws: - :)2]}}"
+			eyeD3 -2 -a "$artist" -t "$title" "$file"
+		fi
 	done
 }
 
@@ -83,7 +103,8 @@ alias mcd='make_and_cd' # make directory and cd into it
 alias b='go_back' # go back x directories
 alias bitrate='get_bitrate' # show bitrate of mp3 file. birate <name>.mp3
 alias bitrateall='for f in *.mp3; do get_bitrate $f; done' # show bitrate of all mp3 files in dir
-alias iplayer='download_iplayer' # download iplayer show via URL, https://github.com/get-iplayer/get_iplayer
-alias ytaudio='download_youtube_audio' # download youtube audio as a MP3 file, https://github.com/ytdl-org/youtube-dl
-alias ytvideo='download_youtube_video' # download youtube audio as a MP4 file, https://github.com/ytdl-org/youtube-dl
+alias iplayer='download_iplayer' # download iplayer show via URL
+alias ytaudio='download_youtube_audio' # download youtube audio as a MP3 file
+alias ytvideo='download_youtube_video' # download youtube audio as a MP4 file 
 alias flactomp3='flac_to_mp3' # recursively convert .flac to .mp3 - e.g. "flactomp3 256" defaults to 320kbps with no arg
+alias tagmp3='tag_mp3' # convert all filenames in folder to ID3, format: artist - title.mp3

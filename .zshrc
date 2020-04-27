@@ -1,5 +1,5 @@
 # path
-PATH="/usr/local/opt/gnupg@1.4/libexec/gpgbin:$PATH"
+PATH="/usr/local/opt/gnupg@1.4/libexec/gpgbin:/Users/a.kilgour/Library/Python/2.7/bin:$PATH"
 
 # antigen
 source ~/.antigen.zsh
