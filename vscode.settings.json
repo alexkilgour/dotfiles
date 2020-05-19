@@ -81,5 +81,7 @@
 	"html.format.wrapLineLength": 0,
 	"editor.minimap.enabled": true,
 	"markdown-toc.detectAndAutoSetSection": false,
-	"markdown-toc.updateOnSave": false
+	"markdown-toc.updateOnSave": false,
+	"npm.enableScriptExplorer": true,
+	"npm.enableRunFromFolder": true
 }
