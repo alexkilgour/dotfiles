@@ -76,8 +76,11 @@ tag_mp3() {
 	for file in *.mp3; do
 		if [[ $file == *"-"* ]]; then
 			local basename="${file%\.*}"
-			local artist="${(C)${basename[(ws: - :)1]}}"
-			local title="${(C)${basename[(ws: - :)2]}}"
+			# local stripped=${basename//^[0-9]/}
+			local stripnum=`echo $basename | sed -e 's/^[0-9]*//'`
+			local stripspace=`echo $stripnum | sed -e 's/^ *//'`
+			local artist="${(C)${stripspace[(ws: - :)1]}}"
+			local title="${(C)${stripspace[(ws: - :)2]}}"
 			eyeD3 -2 -a "$artist" -t "$title" "$file"
 		fi
 	done
