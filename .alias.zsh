@@ -88,7 +88,7 @@ tag_mp3() {
 
 # Public Alises
 
-alias server='python -m SimpleHTTPServer' # web server with the current dir as root. localhost:8000
+alias server='python3 -m http.server 8080' # web server with the current dir as root. localhost:8080
 alias npmglobal='npm list -g --depth=0' # npm global packages
 alias ls-scrips='cat package.json | jq -r .scripts' # print npm scripts
 alias printsimple='for n in *; do printf '%s\n' "$n"; done' # print file/directory names only
@@ -116,3 +116,4 @@ alias ytaudio='download_youtube_audio' # download youtube audio as a MP3 file
 alias ytvideo='download_youtube_video' # download youtube audio as a MP4 file 
 alias convertmp3='convert_to_mp3' # recursively convert .flac/.m4a to .mp3 - e.g. "convertmp3 256" defaults to 320kbps with no arg
 alias tagmp3='tag_mp3' # convert all filenames in folder to ID3, format: artist - title.mp3
+alias twitchdl='twitchdl.sh' # run the twitch video downloader
