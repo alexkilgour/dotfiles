@@ -57,13 +57,8 @@ download_youtube_video () {
 # requirements: ffmpeg
 convert_to_mp3 () {
 	local bitrate="${1:-320}"
-
-	for file in **/*.flac; do
-		ffmpeg -i "$file" -ab "$bitrate"k -map_metadata 0 -id3v2_version 3 "${file%.flac}".mp3
-	done
-
-	for file in **/*.m4a; do
-		ffmpeg -i "$file" -ab "$bitrate"k -map_metadata 0 -id3v2_version 3 "${file%.m4a}".mp3
+	for file in **/*.(flac|m4a|wav|aiff)(N); do
+		ffmpeg -i "$file" -ab "$bitrate"k -map_metadata 0 -id3v2_version 3 "${file%.*}".mp3
 	done
 }
 
@@ -114,6 +109,6 @@ alias bitrateall='for f in *.mp3; do get_bitrate $f; done' # show bitrate of all
 alias iplayer='download_iplayer' # download iplayer show via URL
 alias ytaudio='download_youtube_audio' # download youtube audio as a MP3 file
 alias ytvideo='download_youtube_video' # download youtube audio as a MP4 file 
-alias convertmp3='convert_to_mp3' # recursively convert .flac/.m4a to .mp3 - e.g. "convertmp3 256" defaults to 320kbps with no arg
+alias convertmp3='convert_to_mp3' # recursively convert flac|m4a|wav|aiff to .mp3 - e.g. "convertmp3 256" defaults to 320kbps with no arg
 alias tagmp3='tag_mp3' # convert all filenames in folder to ID3, format: artist - title.mp3
 alias twitchdl='twitchdl.sh' # run the twitch video downloader
