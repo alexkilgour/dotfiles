@@ -14,6 +14,11 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 # vault
 export VAULT_ADDR=https://vault.halfpipe.io
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # aliases
 if [ -f ~/.alias.zsh ]; then
     source ~/.alias.zsh
@@ -94,7 +99,7 @@ antigen bundle mafredri/zsh-async
 # antigen bundle sindresorhus/pure
 
 # Spaceship theme
-antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+antigen theme https://github.com/denysdovhan/spaceship-prompt
 
 # Other bundles
 antigen bundle lukechilds/zsh-nvm
