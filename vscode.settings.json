@@ -84,5 +84,8 @@
 	"markdown-toc.updateOnSave": false,
 	"npm.enableScriptExplorer": true,
 	"npm.enableRunFromFolder": true,
-	"editor.renameOnType": true
+	"editor.renameOnType": true,
+	"material-icon-theme.files.associations": {
+		"*.html": "html"
+	}
 }

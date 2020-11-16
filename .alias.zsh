@@ -81,6 +81,39 @@ tag_mp3() {
 	done
 }
 
+# Get list of remote branches merged via squash and merge
+# Compare to local branches and remove
+prune_squashed() {
+	# get remote branch list as array, strip strings to just branch name
+	local remoteb=("${(@f)$(git remote prune origin --dry-run | grep origin/  | sed "s/^.*origin\///g")}")
+	# get local branch list as array, stip leading and trailing whitespace
+	local localb=("${(@f)$(git branch | grep -Ev "master|main" | awk '{$1=$1};1')}")
+	# array of local branches to remove
+	local toremove=()
+
+	echo "Local branches to remove:"
+	
+	# iterate over local branches and check if they have been merged via squash and merge
+	for i in $localb; do
+		if [[ ${remoteb[(ie)$i]} -le ${#remoteb} ]]; then
+			# store all items to remove and print
+			toremove+=($i)
+			echo " * $i"
+		fi
+	done
+
+	# Optionally remove all branches
+	if read -qs "choice?Remove local branches? (Y/y) "; then
+		echo
+		for i in $toremove; do
+			git branch -D $i
+		done
+    else
+		echo
+		echo "Exiting without removing branches..."
+	fi
+}
+
 # Public Alises
 
 alias server='python3 -m http.server 8080' # web server with the current dir as root. localhost:8080
@@ -97,6 +130,7 @@ alias log='yolog' # yolog
 alias conflict='code `git diff --name-only | uniq`' # show files with conflicts
 alias clustergit="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status && echo)' \;" # git status all the repos
 alias prune='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d' # delete merged branches
+alias prunesquash='prune_squashed' # delete branches merged via squash and merge
 alias gbd='for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r' # print out list of all branches with last commit date to the branch
 alias gitp='pushit' # git push current branch
 alias gitpr='git push -u origin $(get_repo_branch)' # git push branch to remote. gitpr <name-of-branch>
