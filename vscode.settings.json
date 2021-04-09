@@ -10,7 +10,6 @@
             "node_modules/**/*.*"
         ]
     },
-    "eslint.enable": true,
     "editor.fontSize": 12,
     "editor.wordWrapColumn": 80,
     "files.trimTrailingWhitespace": false,
@@ -23,7 +22,8 @@
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
     "files.associations": {
         "*.css.ejs": "css",
-        "*.js.ejs": "javascript"
+		"*.js.ejs": "javascript",
+		"*.html": "html"
     },
     "workbench.startupEditor": "newUntitledFile",
     "files.exclude": {
@@ -79,13 +79,12 @@
 	"workbench.statusBar.feedback.visible": false,
 	"breadcrumbs.enabled": false,
 	"html.format.wrapLineLength": 0,
-	"editor.minimap.enabled": true,
 	"markdown-toc.detectAndAutoSetSection": false,
 	"markdown-toc.updateOnSave": false,
-	"npm.enableScriptExplorer": true,
 	"npm.enableRunFromFolder": true,
 	"editor.renameOnType": true,
 	"material-icon-theme.files.associations": {
 		"*.html": "html"
-	}
+	},
+	"extensions.ignoreRecommendations": false
 }
