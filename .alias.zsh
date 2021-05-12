@@ -146,3 +146,7 @@ alias ytvideo='download_youtube_video' # download youtube audio as a MP4 file
 alias convertmp3='convert_to_mp3' # recursively convert flac|m4a|wav|aiff to .mp3 - e.g. "convertmp3 256" defaults to 320kbps with no arg
 alias tagmp3='tag_mp3' # convert all filenames in folder to ID3, format: artist - title.mp3
 alias twitchdl='twitchdl.sh' # run the twitch video downloader
+
+# requires: npm install -g browser-sync
+export LOCAL_IP=`ipconfig getifaddr en0`
+alias serve="browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000" # start a browsersync server in the current directory
