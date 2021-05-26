@@ -57,7 +57,7 @@ download_youtube_video () {
 # requirements: ffmpeg
 convert_to_mp3 () {
 	local bitrate="${1:-320}"
-	for file in **/*.(flac|m4a|wav|aiff|aif|ogg)(N); do
+	for file in **/*.(flac|m4a|wav|aiff|aif|ogg|ape)(N); do
 		ffmpeg -i "$file" -ab "$bitrate"k -map_metadata 0 -id3v2_version 3 "${file%.*}".mp3
 	done
 }
