@@ -114,6 +114,32 @@ prune_squashed() {
 	fi
 }
 
+# print the current time at our various office locations
+office_times() {
+	zoneinfo=/usr/share/zoneinfo/posix/
+	date='%a %d/%m'
+	time='%H:%M'
+	zone='%Z'
+	zones=( "America/New_York" "Europe/Lisbon" "Europe/London" "Europe/Berlin" "Asia/Kolkata" "Asia/Tokyo" )
+	printf "\n"
+
+	for i in "${zones[@]}"
+		do
+			d=$(TZ=$i date +"$date")
+			t=$(TZ=$i date +"$time")
+			z=$(TZ=$i date +"$zone")
+			printf "\033[1;32m"
+			printf "%-18s" ${i#$zoneinfo}
+			printf "\033[1;36m"
+			printf "%0s" " $t"
+			printf "\033[0;37m"
+			printf "%-8s" " $z"
+			printf "%-0s" ""
+			printf "\033[1;30m"
+			printf "%0s\n" "$d"
+		done
+}
+
 # Public Alises
 
 alias server='python3 -m http.server 8080' # web server with the current dir as root. localhost:8080
@@ -146,6 +172,7 @@ alias ytvideo='download_youtube_video' # download youtube audio as a MP4 file
 alias convertmp3='convert_to_mp3' # recursively convert flac|m4a|wav|aiff to .mp3 - e.g. "convertmp3 256" defaults to 320kbps with no arg
 alias tagmp3='tag_mp3' # convert all filenames in folder to ID3, format: artist - title.mp3
 alias twitchdl='twitchdl.sh' # run the twitch video downloader
+alias office='office_times' # current times in various SND offices
 
 # requires: npm install -g browser-sync
 export LOCAL_IP=`ipconfig getifaddr en0`
